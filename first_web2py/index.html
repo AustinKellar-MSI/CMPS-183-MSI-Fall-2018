@@ -1,0 +1,20 @@
+
+{{extend 'layout.html'}}
+
+{{block head}}
+{{end}}
+
+<table>
+    {{ for title, list in table.items(): }}
+        <tr>
+            <th>
+                {{ =title }}
+            </th>
+            {{ for grade in table[title]: }}
+                <td>
+                    {{ =grade }}
+                </td>
+            {{ pass }}
+        </tr>
+    {{ pass }}
+</table>
