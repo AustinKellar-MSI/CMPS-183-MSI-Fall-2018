@@ -4,6 +4,7 @@
 {{end}}
 
 <div class="main_content">
+    <p>This page displays all of the movies currently in your database. Add one to see it on this list!</p>
     <a href="{{ = URL('default', 'insert') }}" class="btn large">Add Movie!</a><br><br>
     {{ for movie in movies: }}
         <h2>{{ = movie.title }}</h2>
