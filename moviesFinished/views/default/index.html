@@ -1,0 +1,20 @@
+{{extend 'layout.html'}}
+
+{{block head}}
+{{end}}
+
+<div class="main_content">
+  <a href="{{ = URL('default', 'insert') }}" class="btn">Insert Movie</a>
+
+  <div class="movies">
+    {{ for movie in movies: }}
+      <div class="movie-box">
+        <p class="movie-title">{{ = movie.title }}</p>
+        <img src="{{ = URL('download', args=movie.image) }}"/>
+        <a href="{{ = URL('default', 'edit', args=[movie.id]) }}">Edit</a>
+        <a href="{{ = URL('default', 'delete', args=[movie.id]) }}">Delete</a>
+      </div>
+    {{ pass }}
+  </div>
+</div>
+
